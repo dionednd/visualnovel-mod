@@ -1,0 +1,241 @@
+; Visual Novel System by dionednd
+; Motif Defaults
+
+;------------------------------------------------------------------------
+[Info]
+localcoord = 1280,720
+
+;------------------------------------------------------------------------
+[VisualNovel Info]
+
+;Speaker Text
+
+player.name = "$playername$"
+
+speaker.offset = 23,510
+speaker.font = 7,0,1,0,255,255
+speaker.scale = 1.333333333333333, 1.333333333333333
+
+; Input BG
+input.bg.spr = 700,0
+input.bg.scale = 0.25, 0.2
+input.bg.offset = 481, 150
+input.bg.facing = 1
+
+; Input Text
+input.text.font = 7,0,0,255,255,255
+input.text.scale = 1.0, 1.0
+input.text.offset = 640, 180
+input.text.xshear = 0
+input.text.angle = 0
+input.text.projection = "orthographic"
+input.text.focallength = 2048
+input.text.window = 0, 0, 1280, 720
+input.text.cursor = "|"
+input.text.cursorblink = 30
+
+; Choice BG
+choice.inactive.bg.spr = 700,0
+choice.inactive.bg.scale = 0.25, 0.2
+choice.inactive.bg.offset = 481, 150
+choice.inactive.bg.facing = 1
+
+choice.active.bg.spr = 700,0
+choice.active.bg.scale = 0.25, 0.2
+choice.active.bg.offset = 481, 150
+choice.active.bg.facing = 1
+
+; Choice Text
+choice.inactive.text.font = 7,0,0,128,128,128
+choice.inactive.text.scale = 1.0, 1.0
+choice.inactive.text.offset = 640, 180
+choice.inactive.text.xshear = 0
+choice.inactive.text.angle = 0
+choice.inactive.text.projection = "orthographic"
+choice.inactive.text.focallength = 2048
+choice.inactive.text.window = 0, 0, 1280, 720
+
+choice.active.text.font = 7,0,0
+choice.active.text.scale = 1.0, 1.0
+choice.active.text.offset = 640, 180
+choice.active.text.xshear = 0
+choice.active.text.angle = 0
+choice.active.text.projection = "orthographic"
+choice.active.text.focallength = 2048
+choice.active.text.window = 0, 0, 1280, 720
+
+choice.lockedtext = "Locked"
+
+choice.spacing = 60
+
+; key binds
+key.action = a, b, c, x, y, z, s
+key.quicksave = "F9"
+key.quickload = "F10"
+key.pause = m
+key.next = D, L
+key.previous = U, R
+
+key.up = U, B
+key.down = D, F
+scrolldelay = 4
+
+move.snd = 100, 0
+cancel.snd = 100, 2
+done.snd = 100, 1
+locked.snd = 100, 0
+
+[VisualNovel Pause Menu]
+; Pause menu params
+title.offset = 640,48
+title.font = 4,0,0
+title.scale = 1.0, 1.0
+title.text = "PAUSE"
+
+overlay.window = 320, 0, 1280, 960
+overlay.col = 0, 0, 0
+overlay.alpha = 0, 128
+
+menu.item.inactive.offset = 330, 118
+menu.item.inactive.font = 7,0,1, 191,191,191
+menu.item.inactive.scale = 1.0, 1.0
+
+menu.item.active.offset = 330, 118
+menu.item.active.font = 7,0,1
+menu.item.active.scale = 1.0, 1.0
+menu.item.value.offset = 950, 118
+menu.item.value.font = 7,0,-1, 191,191,191
+menu.item.value.scale = 1.0, 1.0
+menu.item.valueactive.offset = 950, 118
+menu.item.valueactive.font = 7,0,-1
+menu.item.valueactive.scale = 1.0, 1.0
+menu.item.all.spacing = 0, 42
+
+menu.item.locked.offset = 0, 0
+menu.item.locked.font = 7,0,1, 128,128,128
+menu.item.locked.scale = 1.0, 1.0
+menu.item.lockedactive.offset = 0, 0
+menu.item.lockedactive.font = 7,0,1, 191, 191, 191
+menu.item.lockedactive.scale = 1.0, 1.0
+
+menu.boxcursor.window = 320, 121, 960, 91
+menu.boxcursor.col = 32, 32, 32
+menu.boxcursor.alpha = 128, 128
+
+menu.itemname.continue = "Continue"
+menu.itemname.backlog = "Backlog"
+menu.itemname.menutext = "Text Options"
+menu.itemname.spacer1 = ""
+menu.itemname.save = "Save"
+menu.itemname.load = "Load"
+menu.itemname.spacer2 = ""
+menu.itemname.exit = "Exit"
+
+menutext.title = "TEXT OPTIONS"
+menuaudio.title = "AUDIO OPTIONS"
+
+menutext.itemname.textspeed = "Text Speed"
+menutext.itemname.spacer1 = ""
+menutext.itemname.savetext = "Save and Return"
+menutext.itemname.defaulttext = "Revert to Default"
+menutext.itemname.spacer2 = ""
+menutext.itemname.return = "Return"
+
+menusaveload.itemname.slot1 = "Slot 1"
+menusaveload.itemname.slot2 = "Slot 2"
+menusaveload.itemname.slot3 = "Slot 3"
+menusaveload.itemname.slot4 = "Slot 4"
+menusaveload.itemname.slot5 = "Slot 5"
+menusaveload.itemname.slot6 = "Slot 6"
+menusaveload.itemname.slot7 = "Slot 7"
+menusaveload.itemname.slot8 = "Slot 8"
+menusaveload.itemname.slot9 = "Slot 9"
+menusaveload.itemname.spacer1 = ""
+menusaveload.itemname.slot10 = "Quicksave"
+menusaveload.itemname.slot11 = "Autosave"
+menusaveload.itemname.spacer2 = ""
+menusaveload.itemname.return = "Return"
+
+[VisualNovelBGdef]
+bgclearcolor = 0,0,0
+
+[VisualNovelBG Background Sky]
+type = normal
+spriteno = 100,0
+layerno = 0
+start = -640,0
+
+[VisualNovelBG Background Clouds Top]
+type = normal
+spriteno = 100,2
+layerno = 0
+start = -640, -50
+tile = 1,0
+velocity = -0.1, 0
+window = 0,0, 1279,959
+mask = 1
+
+[VisualNovelBG Background Clouds Bottom]
+type = normal
+spriteno = 100,3
+layerno = 0
+start = -640, 0
+tile = 1,0
+velocity = -0.7, 0
+window = 0,0, 1279,959
+mask = 1
+
+[Backlog Info]
+
+title.offset = 1200,48
+title.font = 4,0,-1
+title.scale = 1.0, 1.0
+title.text = "BACKLOG"
+
+overlay.window = 0, 0, 1280, 720
+overlay.col = 0, 0, 0
+overlay.alpha = 0, 128
+
+backlog.text.offset = 20,90
+backlog.text.font = 7,0,1
+backlog.text.scale = 1.0, 1.0
+backlog.text.spacing = 0, 27
+
+backlog.boxcursor.window = 0, 603, 1280, 633
+backlog.boxcursor.col = 32, 32, 32
+backlog.boxcursor.alpha = 128, 128
+
+
+
+[BacklogBGdef]
+bgclearcolor = 0,0,0
+
+[BacklogBG Background Sky]
+type = normal
+spriteno = 100,0
+layerno = 0
+start = -640,0
+
+[BacklogBG Background Clouds Top]
+type = normal
+spriteno = 100,2
+layerno = 0
+start = -640, -50
+tile = 1,0
+velocity = -0.1, 0
+window = 0,0, 1279,959
+mask = 1
+
+[BacklogBG Background Clouds Bottom]
+type = normal
+spriteno = 100,3
+layerno = 0
+start = -640, 0
+tile = 1,0
+velocity = -0.7, 0
+window = 0,0, 1279,959
+mask = 1
+
+[SaveLoad Info]
+save.text = "SAVE"
+load.text = "LOAD"

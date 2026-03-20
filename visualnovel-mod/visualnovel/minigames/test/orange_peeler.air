@@ -1,0 +1,64 @@
+
+; KFM Standing on Business
+[Begin Action 0]
+0,4, 0,0, 1
+0,3, 0,0, 1
+0,2, 0,0, 1
+0,1, 0,0, 1
+0,0, 0,0, -1
+
+; KFM Hates Limes
+[Begin Action 1]
+200,2, 0,0, 2
+200,1, 0,0, 2
+200,0, 0,0, 2
+0,0, 0,0, -1
+
+; KFM Peels Orange Today
+[Begin Action 2]
+210,3, 0,0, 2
+210,4, 0,0, 2
+210,5, 0,0, 2
+0,0, 0,0, -1
+
+; Ouch!
+[Begin Action 3]
+5000,10, 0,0, 2
+5000,0, 0,0, 2
+0,0, 0,0, -1
+
+; Orange
+[Begin Action 10]
+6000,3, -9,-10, -1
+
+; Peeled Orange
+[Begin Action 11]
+6000,2, -9,-10, 15, ,, 1,1, 0
+interpolate angle
+interpolate offset
+interpolate blend
+6000,2, 45,120, -1, ,AS0D256, 1,1, -90
+
+; Lime
+[Begin Action 20]
+6000,1, -9,-10, -1
+
+; Squashed Lime
+[Begin Action 21]
+6000,0, -9,-10, 15, ,, 1,1, 0
+interpolate angle
+interpolate offset
+interpolate blend
+6000,0, 45,120, -1, ,AS0D256, 1,1, -90
+
+; Outline
+[Begin Action 30]
+6000,4, -9,-10, -1
+
+; Outline Press
+[Begin Action 31]
+6000,4, -9,-10, 10
+interpolate scale
+interpolate offset
+interpolate blend
+6000,4, -18,-20, -1, ,AS0D256, 2,2

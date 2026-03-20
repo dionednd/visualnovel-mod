@@ -1,0 +1,84 @@
+; Kung Fu Man motif introduction storyboard
+
+; This storyboard uses several scenes
+
+[Info]
+localcoord = 1920,1080
+
+[SceneDef]
+spr = visualnovel.sff ; i advise you to only use 1 sff file to prevent loading during every storyboards.
+startscene = 0
+stopmusic = 1
+font1 = font/Open_Sans.def
+
+;Animation for Character
+[Begin Action 1]
+LoopStart
+1,6, 0,0, 128
+1,0, 0,0, 12
+1,6, 0,0, 192
+1,0, 0,0, 12
+
+; TalkBox
+[Begin Action 2]
+0,2, 0,0, -1
+
+[BG0Def]
+
+[BG0 Background]
+type = normal
+spriteno = 0,1
+start = -960,0
+
+[BG0 Character]
+type = anim
+actionno = 1
+start = -600,52
+
+[BG0 TalkBox]
+type = anim
+actionno = 2
+start = -960,0
+
+[BG1Def]
+
+[BG1 Background]
+type = normal
+spriteno = 0,0
+start = -960,0
+
+[BG1 Character]
+type = anim
+actionno = 1
+start = -600,52
+
+[BG1 TalkBox]
+type = anim
+actionno = 2
+start = -960,0
+
+;------------------------------------
+;First Scene
+[Scene 0]
+fadein.time = 30
+fadeout.time = 0
+cutscene = 0
+
+; BGM, add this to all the scenes you wish to have this music on so you don't get muted music
+bgm = flop_era.mp3
+
+; BG
+bg.name = BG1          ;Name of BG to show (no spaces allowed)
+layerall.pos = 0,0  ;Default position for all layers
+
+; Text
+layer0.offset = 35, 825
+layer0.text = "You peeled $oranges_peeled$ Oranges and got $orangepeeler_score$ points?\nGood job, I'm genuinely impressed!"
+layer0.starttime = 1
+layer0.textdelay = 4
+layer0.textwindow = 35,701,1920,1045
+layer0.font = 1, 0, 1, 255, 255, 255
+layer0.scale = 1.5
+layer0.speaker = "dionednd"
+; Total time
+end.time = 999 ; Doesn't matter if cutscene isn't 1
